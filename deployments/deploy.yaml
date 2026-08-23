@@ -1,6 +1,5 @@
 version: 2
 defaultProfile: cloud.production
-
 profiles:
   cloud.test:
     deployment:
@@ -17,12 +16,23 @@ profiles:
     install:
       layout: binary-package
     expose:
-      - domain: games-test.sdkwork.com
-        tls: sdkwork.com
-        mode: web
-        web: pc
       - domain: gameengine-test.sdkwork.com
         tls: sdkwork.com
+        mode: api
+      - domain: gameengine-test.birdcoder.com
+        tls: birdcoder.com
+        mode: api
+      - domain: gameengine-test.dtupay.com
+        tls: dtupay.com
+        mode: api
+      - domain: gameengine-test.sdkwork.cn
+        tls: sdkwork.cn
+        mode: api
+      - domain: gameengine-test.birdcoder.cn
+        tls: birdcoder.cn
+        mode: api
+      - domain: gameengine-test.dtupay.cn
+        tls: dtupay.cn
         mode: api
     packages: []
     overrides:
@@ -36,7 +46,6 @@ profiles:
           platform.api-gateway: https://api-test.sdkwork.com
       kubernetes:
         reference: deployments/kubernetes/
-
   cloud.staging:
     deployment:
       deploymentProfile: cloud
@@ -52,12 +61,23 @@ profiles:
     install:
       layout: binary-package
     expose:
-      - domain: games-staging.sdkwork.com
-        tls: sdkwork.com
-        mode: web
-        web: pc
       - domain: gameengine-staging.sdkwork.com
         tls: sdkwork.com
+        mode: api
+      - domain: gameengine-staging.birdcoder.com
+        tls: birdcoder.com
+        mode: api
+      - domain: gameengine-staging.dtupay.com
+        tls: dtupay.com
+        mode: api
+      - domain: gameengine-staging.sdkwork.cn
+        tls: sdkwork.cn
+        mode: api
+      - domain: gameengine-staging.birdcoder.cn
+        tls: birdcoder.cn
+        mode: api
+      - domain: gameengine-staging.dtupay.cn
+        tls: dtupay.cn
         mode: api
     packages: []
     overrides:
@@ -71,7 +91,6 @@ profiles:
           platform.api-gateway: https://api-staging.sdkwork.com
       kubernetes:
         reference: deployments/kubernetes/
-
   cloud.production:
     deployment:
       deploymentProfile: cloud
@@ -87,15 +106,23 @@ profiles:
     install:
       layout: binary-package
     expose:
-      - domain: games.sdkwork.com
-        tls: sdkwork.com
-        mode: web
-        web: pc
       - domain: gameengine.sdkwork.com
         tls: sdkwork.com
         mode: api
-      - domain: api.sdkwork.com
-        tls: sdkwork.com
+      - domain: gameengine.birdcoder.com
+        tls: birdcoder.com
+        mode: api
+      - domain: gameengine.dtupay.com
+        tls: dtupay.com
+        mode: api
+      - domain: gameengine.sdkwork.cn
+        tls: sdkwork.cn
+        mode: api
+      - domain: gameengine.birdcoder.cn
+        tls: birdcoder.cn
+        mode: api
+      - domain: gameengine.dtupay.cn
+        tls: dtupay.cn
         mode: api
     packages: []
     overrides:
@@ -109,7 +136,6 @@ profiles:
           platform.api-gateway: https://api.sdkwork.com
       kubernetes:
         reference: deployments/kubernetes/
-
   standalone.production:
     deployment:
       deploymentProfile: standalone
@@ -124,7 +150,31 @@ profiles:
       availabilityMode: single-instance
     install:
       layout: binary-package
-    expose: []
+    expose:
+      - tls: sdkwork.com
+        mode: web
+        web: adaptive
+        domain: gameengine.sdkwork.com
+      - tls: birdcoder.com
+        mode: web
+        web: adaptive
+        domain: gameengine.birdcoder.com
+      - tls: dtupay.com
+        mode: web
+        web: adaptive
+        domain: gameengine.dtupay.com
+      - tls: sdkwork.cn
+        mode: web
+        web: adaptive
+        domain: gameengine.sdkwork.cn
+      - tls: birdcoder.cn
+        mode: web
+        web: adaptive
+        domain: gameengine.birdcoder.cn
+      - tls: dtupay.cn
+        mode: web
+        web: adaptive
+        domain: gameengine.dtupay.cn
     packages: []
     overrides:
       topology:
