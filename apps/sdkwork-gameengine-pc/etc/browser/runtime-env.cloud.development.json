@@ -1,0 +1,12 @@
+{
+  "environment": "development",
+  "deploymentProfile": "cloud",
+  "profileId": "cloud.development",
+  "runtimeTarget": "browser",
+  "browserOriginMode": "cross-origin",
+  "appApiBaseUrl": "https://api-development.sdkwork.com",
+  "backendApiBaseUrl": "https://api-development.sdkwork.com",
+  "driveAppApiBaseUrl": "https://api-development.sdkwork.com",
+  "appbaseAppApiBaseUrl": "https://api-development.sdkwork.com",
+  "deployAppApiBaseUrl": "https://api-development.sdkwork.com"
+}
