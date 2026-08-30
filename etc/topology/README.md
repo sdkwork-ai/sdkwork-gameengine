@@ -10,6 +10,8 @@ detail and is not encoded in profile ids, env keys, scripts, or client bootstrap
 | `standalone.production.env` | standalone | production | server |
 | `cloud.development.env` | cloud | development | server |
 | `cloud.production.env` | cloud | production | container |
+| `standalone.demo.env` | standalone | demo | server |
+| `cloud.demo.env` | cloud | demo | container |
 
 The application code is `games`, so runtime topology and database keys use the
 `SDKWORK_GAMES_*` prefix. Browser-visible mirrors use `VITE_SDKWORK_GAMES_*` and
