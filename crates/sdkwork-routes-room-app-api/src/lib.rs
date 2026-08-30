@@ -13,3 +13,13 @@ pub use paths::{
     GAMES_ROOM_START_PATH,
 };
 pub use routes::{build_room_app_router, GamesRoomsListQuery};
+
+use sdkwork_web_core::HttpRouteManifest;
+
+pub fn gateway_route_manifest() -> HttpRouteManifest {
+    gateway_route_manifest()
+}
+
+pub fn gateway_mount() -> HttpRouteManifest {
+    gateway_route_manifest()
+}

@@ -509,9 +509,10 @@
             ]
           },
           "version": {
-            "type": "integer",
+            "type": "string",
             "format": "int64",
-            "minimum": 0
+            "minimum": 0,
+            "x-sdkwork-int64-string": true
           }
         }
       },
@@ -558,9 +559,10 @@
             ]
           },
           "version": {
-            "type": "integer",
+            "type": "string",
             "format": "int64",
-            "minimum": 0
+            "minimum": 0,
+            "x-sdkwork-int64-string": true
           }
         }
       },
@@ -573,9 +575,10 @@
             "maxLength": 500
           },
           "expectedVersion": {
-            "type": "integer",
+            "type": "string",
             "format": "int64",
-            "minimum": 0
+            "minimum": 0,
+            "x-sdkwork-int64-string": true
           }
         }
       },

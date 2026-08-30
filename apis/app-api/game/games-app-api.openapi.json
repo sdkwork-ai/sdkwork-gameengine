@@ -68,7 +68,8 @@
           "default": {
             "$ref": "#/components/responses/ProblemDetailResponse"
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/app/v3/api/games/ready": {
@@ -124,12 +125,13 @@
           "default": {
             "$ref": "#/components/responses/ProblemDetailResponse"
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/app/v3/api/games": {
       "get": {
-        "operationId": "games.catalog.list",
+        "operationId": "catalog.list",
         "tags": [
           "games"
         ],
@@ -182,7 +184,7 @@
     },
     "/app/v3/api/games/{gameId}": {
       "get": {
-        "operationId": "games.catalog.retrieve",
+        "operationId": "catalog.retrieve",
         "tags": [
           "games"
         ],
@@ -410,7 +412,8 @@
           "default": {
             "$ref": "#/components/responses/ProblemDetailResponse"
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/app/v3/api/games/rooms/{roomId}": {
@@ -1024,9 +1027,10 @@
             ]
           },
           "version": {
-            "type": "integer",
+            "type": "string",
             "format": "int64",
-            "minimum": 0
+            "minimum": 0,
+            "x-sdkwork-int64-string": true
           }
         }
       },
@@ -1073,9 +1077,10 @@
             ]
           },
           "version": {
-            "type": "integer",
+            "type": "string",
             "format": "int64",
-            "minimum": 0
+            "minimum": 0,
+            "x-sdkwork-int64-string": true
           }
         }
       },
@@ -1132,9 +1137,10 @@
             "type": "string"
           },
           "expectedVersion": {
-            "type": "integer",
+            "type": "string",
             "format": "int64",
-            "minimum": 0
+            "minimum": 0,
+            "x-sdkwork-int64-string": true
           }
         }
       },
@@ -1143,9 +1149,10 @@
         "additionalProperties": false,
         "properties": {
           "expectedVersion": {
-            "type": "integer",
+            "type": "string",
             "format": "int64",
-            "minimum": 0
+            "minimum": 0,
+            "x-sdkwork-int64-string": true
           }
         }
       },
@@ -1160,9 +1167,10 @@
             "type": "boolean"
           },
           "expectedVersion": {
-            "type": "integer",
+            "type": "string",
             "format": "int64",
-            "minimum": 0
+            "minimum": 0,
+            "x-sdkwork-int64-string": true
           }
         }
       },
@@ -1190,8 +1198,9 @@
             "type": "string"
           },
           "score": {
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "int64",
+            "x-sdkwork-int64-string": true
           },
           "rankNo": {
             "type": "integer",
