@@ -1711,6 +1711,7 @@ dependencies = [
  "sdkwork-routes-room-backend-api",
  "sdkwork-web-bootstrap",
  "sdkwork-web-core",
+ "tokio",
 ]
 
 [[package]]
@@ -1787,7 +1788,6 @@ dependencies = [
  "serde_json",
  "sqlx",
  "thiserror",
- "tokio",
  "tracing",
 ]
 
