@@ -5,11 +5,7 @@
 mod bootstrap;
 mod generated;
 
-pub use bootstrap::{
-    assemble_api_router, assemble_api_router_runtime, assemble_api_router_with_pool,
-    assemble_api_router_with_service_parts, assemble_api_router_with_services,
-    assemble_business_routes, ApiAssembly, ApiAssemblyRuntime,
-};
+pub use bootstrap::{assemble_api_router, ApiAssembly, ApiAssemblyRuntime, assemble_api_router_runtime, assemble_api_router_with_pool, assemble_api_router_with_service_parts, assemble_api_router_with_services, assemble_business_routes, web_module, web_module_with_pool};
 pub use sdkwork_gameengine_service_host::{
     build_catalog_service, build_gateway_runtime, build_gateway_runtime_with_pool,
     build_gateway_services, build_leaderboard_service, build_room_service, GatewayRuntime,

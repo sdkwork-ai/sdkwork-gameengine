@@ -6,7 +6,7 @@ use sdkwork_iam_web_adapter::{
     build_web_framework_builder, iam_web_request_context_resolver_from_database_pool_for_audiences,
     iam_web_request_context_resolver_from_env, IamAuditEmitter, IamSecurityEventEmitter,
 };
-use sdkwork_web_bootstrap::{infra_public_path_prefixes, ComposedApiAssembly};
+use sdkwork_web_bootstrap::{ApiModuleRegistry, ComposedApiAssembly, infra_public_path_prefixes};
 use sdkwork_web_core::WebRequestContextResolver;
 
 const APPLICATION_ID: &str = "sdkwork-gameengine";
@@ -36,7 +36,9 @@ pub async fn build_router(runtime: ApiAssemblyRuntime) -> Result<Router, String>
         assembly.route_manifest.clone(),
         infra_public_path_prefixes(),
     );
-    if production {
+    let mut module_registry = ApiModuleRegistry::new();
+    module_registry.add_modules(vec![assembly]);
+if production {
         let postgres_pool = runtime
             .database_pool
             .as_postgres()
@@ -54,7 +56,8 @@ pub async fn build_router(runtime: ApiAssemblyRuntime) -> Result<Router, String>
             )));
     }
     Ok(
-        ComposedApiAssembly::try_compose("SDKWork Game Engine API", vec![assembly])?
+        module_registry
+    .try_compose("SDKWork Game Engine API")?
             .into_hosted(framework)
             .router,
     )
