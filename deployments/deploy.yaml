@@ -25,6 +25,9 @@ profiles:
       - domain: gameengine-test.dtupay.com
         tls: dtupay.com
         mode: api
+      - domain: gameengine-test.noaper.com
+        tls: noaper.com
+        mode: api
       - domain: gameengine-test.sdkwork.cn
         tls: sdkwork.cn
         mode: api
@@ -33,6 +36,9 @@ profiles:
         mode: api
       - domain: gameengine-test.dtupay.cn
         tls: dtupay.cn
+        mode: api
+      - domain: gameengine-test.noaper.cn
+        tls: noaper.cn
         mode: api
       - domain: gameengine-test.skubc.com
         tls: skubc.com
@@ -94,6 +100,9 @@ profiles:
       - domain: gameengine-staging.dtupay.com
         tls: dtupay.com
         mode: api
+      - domain: gameengine-staging.noaper.com
+        tls: noaper.com
+        mode: api
       - domain: gameengine-staging.sdkwork.cn
         tls: sdkwork.cn
         mode: api
@@ -102,6 +111,9 @@ profiles:
         mode: api
       - domain: gameengine-staging.dtupay.cn
         tls: dtupay.cn
+        mode: api
+      - domain: gameengine-staging.noaper.cn
+        tls: noaper.cn
         mode: api
       - domain: gameengine-staging.skubc.com
         tls: skubc.com
@@ -163,6 +175,9 @@ profiles:
       - domain: gameengine.dtupay.com
         tls: dtupay.com
         mode: api
+      - domain: gameengine.noaper.com
+        tls: noaper.com
+        mode: api
       - domain: gameengine.sdkwork.cn
         tls: sdkwork.cn
         mode: api
@@ -171,6 +186,9 @@ profiles:
         mode: api
       - domain: gameengine.dtupay.cn
         tls: dtupay.cn
+        mode: api
+      - domain: gameengine.noaper.cn
+        tls: noaper.cn
         mode: api
       - domain: gameengine.skubc.com
         tls: skubc.com
@@ -235,6 +253,10 @@ profiles:
         mode: web
         web: adaptive
         domain: gameengine.dtupay.com
+      - tls: noaper.com
+        mode: web
+        web: adaptive
+        domain: gameengine.noaper.com
       - tls: sdkwork.cn
         mode: web
         web: adaptive
@@ -247,6 +269,10 @@ profiles:
         mode: web
         web: adaptive
         domain: gameengine.dtupay.cn
+      - tls: noaper.cn
+        mode: web
+        web: adaptive
+        domain: gameengine.noaper.cn
       - tls: skubc.com
         mode: web
         web: adaptive
