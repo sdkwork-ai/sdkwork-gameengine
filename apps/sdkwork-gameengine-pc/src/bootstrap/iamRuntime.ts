@@ -10,6 +10,7 @@ import { normalizeSdkworkApiBaseUrl } from '@sdkwork/runtime-bootstrap';
 import { createClient as createGameengineAppClient } from '@sdkwork/gameengine-app-sdk';
 
 import type { SdkworkGameenginePcRuntimeConfig } from './environment';
+import { resolveSharedSdkApiBaseUrl } from './resolveSdkApiBaseUrl';
 import {
   createSdkworkGameenginePcSessionStore,
   SDKWORK_GAMEENGINE_PC_SESSION_STORAGE_KEY,
@@ -116,7 +117,11 @@ function createAppbaseGeneratedAppClient(
 }
 
 function resolveAppbaseAppApiBaseUrl(config: SdkworkGameenginePcRuntimeConfig): string {
+  // The shared `SDKWORK_API_BASE_URL` key resolved through
+  // `@sdkwork/sdk-common` wins; the config-derived urls only survive as a
+  // fallback.
   return (
+    resolveSharedSdkApiBaseUrl() ??
     config.sdkBaseUrls?.dependencySdkBaseUrls?.[APPBASE_APP_SDK_FAMILY_ID]?.appApiBaseUrl ??
     config.appApiBaseUrl
   );
