@@ -1,4 +1,5 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-api-gameengine-standalone-gateway"
 version.workspace = true
 edition.workspace = true
@@ -35,3 +36,7 @@ sdkwork_game_room_service.workspace = true
 tokio.workspace = true
 tower = { version = "0.5", features = ["util"] }
 
+
+
+[lints]
+workspace = true

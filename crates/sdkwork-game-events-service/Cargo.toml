@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-game-events-service"
 version.workspace = true
 edition.workspace = true
 license = "Apache-2.0"
 description = "SDKWork games engine events and audit domain service."
 
+
+[lints]
+workspace = true
 [lib]
 name = "sdkwork_game_events_service"
 path = "src/lib.rs"

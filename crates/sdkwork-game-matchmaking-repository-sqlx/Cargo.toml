@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-game-matchmaking-repository-sqlx"
 version.workspace = true
 edition.workspace = true
 license = "Apache-2.0"
 description = "SQLx-backed games matchmaking repository."
 
+
+[lints]
+workspace = true
 [lib]
 name = "sdkwork_game_matchmaking_repository_sqlx"
 path = "src/lib.rs"

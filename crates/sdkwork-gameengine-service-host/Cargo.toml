@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-gameengine-service-host"
 edition.workspace = true
 version.workspace = true
 license = "Apache-2.0"
 description = "In-process Gameengine service container for gateway assembly."
 
+
+[lints]
+workspace = true
 [dependencies]
 sdkwork-database-sqlx.workspace = true
 sdkwork_gameengine_database_host.workspace = true

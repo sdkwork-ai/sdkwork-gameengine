@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-routes-gameengine-catalog-backend-api"
 version.workspace = true
 edition.workspace = true
 license = "Apache-2.0"
 description = "SDKWork games catalog backend-api router."
 
+
+[lints]
+workspace = true
 [lib]
 name = "sdkwork_routes_gameengine_catalog_backend_api"
 path = "src/lib.rs"

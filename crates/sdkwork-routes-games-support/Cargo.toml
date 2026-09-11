@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-routes-games-support"
 version.workspace = true
 edition.workspace = true
 license = "Apache-2.0"
 description = "Shared SDKWork games HTTP response, problem, and correlation helpers."
 
+
+[lints]
+workspace = true
 [dependencies]
 axum.workspace = true
 sdkwork_game_catalog_service.workspace = true

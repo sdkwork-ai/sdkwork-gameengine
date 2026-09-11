@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-game-room-repository-sqlx"
 version.workspace = true
 edition.workspace = true
 license = "Apache-2.0"
 description = "SQLx-backed games room repository."
 
+
+[lints]
+workspace = true
 [lib]
 name = "sdkwork_game_room_repository_sqlx"
 path = "src/lib.rs"
