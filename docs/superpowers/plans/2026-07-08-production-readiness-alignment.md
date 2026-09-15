@@ -48,7 +48,7 @@ scope.
 
 ## Verification Evidence
 
-Fresh verification was run from `E:\sdkwork-space\sdkwork-gameengine`:
+Fresh verification was run from `<workspace-root>/sdkwork-gameengine`:
 
 ```bash
 node ../sdkwork-specs/tools/check-api-operation-patterns.mjs --workspace .
@@ -95,7 +95,7 @@ The aggregate production-readiness contract covers the PC shell, sidebar, topbar
 active-room grid, leaderboard, i18n bundle, removed package directories, IAM session mirror, and
 IAM-owned logout flow.
 
-The shared topology implementation was also revalidated from `E:\sdkwork-space\sdkwork-app-topology`
+The shared topology implementation was also revalidated from `<workspace-root>/sdkwork-app-topology`
 with `pnpm test` and `pnpm run validate:example` because the gameengine topology profiles consume
 that shared resolver.
 
