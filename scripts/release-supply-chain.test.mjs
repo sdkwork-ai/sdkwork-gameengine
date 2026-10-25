@@ -36,7 +36,7 @@ test('application topology does not own a platform gateway process', () => {
 });
 
 test('PC app manifest requires checksum signature and SBOM release evidence', () => {
-  const manifest = readJson('apps/sdkwork-gameengine-pc/sdkwork.app.config.json');
+  const manifest = readJson('apps/sdkwork-gameengine-pc/agent.app.config.json');
 
   assert.equal(manifest.security.checksumRequired, true);
   assert.equal(manifest.security.signatureRequired, true);

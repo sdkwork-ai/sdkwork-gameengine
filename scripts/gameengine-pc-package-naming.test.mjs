@@ -34,9 +34,9 @@ function isAllowedPcPackageName(name) {
 }
 
 test('PC app root uses sdkwork-gameengine-pc directory and manifest', () => {
-  assert.ok(fs.existsSync(path.join(pcRoot, 'sdkwork.app.config.json')));
+  assert.ok(fs.existsSync(path.join(pcRoot, 'agent.app.config.json')));
   const manifest = JSON.parse(
-    fs.readFileSync(path.join(pcRoot, 'sdkwork.app.config.json'), 'utf8'),
+    fs.readFileSync(path.join(pcRoot, 'agent.app.config.json'), 'utf8'),
   );
   assert.equal(manifest.app.key, 'sdkwork-gameengine-pc');
   assert.equal(manifest.runtime.family, 'pc');

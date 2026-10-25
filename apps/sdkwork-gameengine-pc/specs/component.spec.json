@@ -19,7 +19,7 @@
     "status": "prelaunch-production-baseline",
     "manifests": [
       "package.json",
-      "sdkwork.app.config.json"
+      "agent.app.config.json"
     ]
   },
   "canonicalSpecs": [
@@ -99,16 +99,16 @@
       "@sdkwork/iam-app-sdk"
     ],
     "permissionComposition": {
-      "owner": "sdkwork.app.config.json",
+      "owner": "agent.app.config.json",
       "mode": "app-runtime"
     },
     "dependencyApiExports": [],
     "dependencyApiSurfaces": [],
     "events": [],
     "configKeys": [
-      "sdkwork.app.config.json#runtime.apiBaseUrl",
-      "sdkwork.app.config.json#runtime.appApiPrefix",
-      "sdkwork.app.config.json#runtime.backendApiPrefix"
+      "agent.app.config.json#runtime.apiBaseUrl",
+      "agent.app.config.json#runtime.appApiPrefix",
+      "agent.app.config.json#runtime.backendApiPrefix"
     ]
   },
   "verification": {

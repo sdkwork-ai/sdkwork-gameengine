@@ -32,7 +32,7 @@ Current repository evidence shows a pre-launch production baseline around game c
 read-only leaderboards, IAM session mirroring, bounded room capacity, SQLite/PostgreSQL lifecycle
 parity, and release safety:
 
-- Root manifest: `sdkwork.app.config.json` with domain `game` and generated SDK authorities for
+- Root manifest: `agent.app.config.json` with domain `game` and generated SDK authorities for
   `sdkwork-gameengine-app-api` and `sdkwork-gameengine-backend-api`.
 - App API: health/ready, game list/detail, room list/create/retrieve/seats/join/leave/ready/start/
   close, leaderboard list, and my leaderboard entry.

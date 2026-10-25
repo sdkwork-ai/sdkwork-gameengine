@@ -9,7 +9,7 @@ Specs: ARCHITECTURE_DECISION_SPEC.md, DOCUMENTATION_SPEC.md, API_SPEC.md, SDK_SP
 
 - Product PRD: [../../product/prd/PRD.md](../../product/prd/PRD.md)
 - Database design: [TECH-gameengine-database-design.md](TECH-gameengine-database-design.md)
-- Root manifest: `sdkwork.app.config.json`
+- Root manifest: `agent.app.config.json`
 - Runtime topology: `specs/topology.spec.json`
 - Current API authorities:
   - `sdkwork-gameengine-app-api`

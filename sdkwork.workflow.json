@@ -6,7 +6,7 @@
     "name": "SDKWork Games",
     "repository": "sdkwork-ai/sdkwork-games",
     "sourcePath": ".",
-    "configPath": "sdkwork.app.config.json"
+    "configPath": "agent.app.config.json"
   },
   "release": {
     "artifactPrefix": "sdkwork-games",

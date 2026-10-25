@@ -20,14 +20,14 @@ Do not copy root standard text into this application root. If these relative pat
 
 ## Application Identity
 
-Application manifest: `sdkwork.app.config.json` (`sdkwork-gameengine-pc`, domain `game`, PC browser runtime).
+Application manifest: `agent.app.config.json` (`sdkwork-gameengine-pc`, domain `game`, PC browser runtime).
 
 This root is the SDKWork Games PC browser application surface. It composes SDK-backed catalog, rooms, active room listing, global read-only leaderboard, and IAM session runtime. It must not reintroduce unbacked local economy, retired feature packages, local auth, simulated matchmaking, or client-side full-download pagination.
 
 ## Local Dictionary Structure
 
 - `AGENTS.md`: PC application agent entrypoint and relative SDKWORK spec index.
-- `sdkwork.app.config.json`: PC app manifest, runtime profile, release metadata, and SDK family references.
+- `agent.app.config.json`: PC app manifest, runtime profile, release metadata, and SDK family references.
 - `specs/component.spec.json`: PC app root component contract.
 - `package.json`: PC app root scripts and package graph.
 - `src/`: thin renderer bootstrap and composition boundary.
@@ -37,7 +37,7 @@ This root is the SDKWork Games PC browser application surface. It composes SDK-b
 ## Spec Resolution Order
 
 1. Read this `AGENTS.md`.
-2. Read `sdkwork.app.config.json`.
+2. Read `agent.app.config.json`.
 3. Read `specs/component.spec.json`.
 4. Read repository root `../../AGENTS.md` and `../../specs/component.spec.json` when the task crosses root contracts.
 5. Read `../../../sdkwork-specs/README.md` and only the task-specific root specs.
