@@ -324,7 +324,7 @@ Production profiles require `SDKWORK_DATABASE_PASSWORD_FILE` and
 `SDKWORK_DATABASE_AUTO_MIGRATE=false`; development profiles may use local inline PostgreSQL
 password env values for bootstrap only.
 
-Release safety is enforced by `sdkwork.workflow.json` and the PC app manifest: checksums,
+Release safety is enforced by `agent.workflow.json` and the PC app manifest: checksums,
 signatures, SBOMs, and artifact attestations are required. The release lifecycle uses
 `scripts/release-supply-chain.mjs` to create checksum/signature evidence and CycloneDX SBOMs; if
 the protected signing key is not supplied by CI, the release fails instead of publishing unsigned

@@ -14,7 +14,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const workflow = readJson('sdkwork.workflow.json');
+const workflow = readJson('agent.workflow.json');
 
 const evidenceDir = resolve(repoRoot, 'dist', 'release-evidence');
 const sbomDir = resolve(repoRoot, 'dist', 'sbom');

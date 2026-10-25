@@ -11,7 +11,7 @@ function readJson(path) {
 }
 
 test('release workflow enforces supply-chain evidence instead of placeholders', () => {
-  const workflow = readJson('sdkwork.workflow.json');
+  const workflow = readJson('agent.workflow.json');
   const serialized = JSON.stringify(workflow);
 
   assert.equal(workflow.security.artifactAttestations, true);
